@@ -1,0 +1,175 @@
+* {
+  box-sizing: border-box !important;
+  margin: 0;
+  padding: 0;
+}
+
+footer {
+  width: 100%;
+}
+
+.one {
+  height: 45vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.one .textFoot {
+  width: 60%;
+  text-align: left;
+  padding-left: 5%;
+}
+.one .textFoot h5 {
+  color: darkgreen;
+  font-size: 1rem;
+  padding: 10px 0px;
+}
+.one .textFoot h1 {
+  font-size: 2rem;
+  padding: 10px 0px;
+}
+.one .textFoot .h3 {
+  font-size: 1.5rem;
+  padding: 10px 0px;
+}
+.one .textFoot .h3 input[type=email] {
+  width: 60%;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid white;
+  color: white;
+}
+.one .textFoot .h3 input[type=email]::-moz-placeholder {
+  color: white;
+  font-size: 0.9rem;
+}
+.one .textFoot .h3 input[type=email]::placeholder {
+  color: white;
+  font-size: 0.9rem;
+}
+.one .textFoot .h3 input[type=email]:hover {
+  color: darkgreen;
+  outline: 0;
+  border: 0;
+  border-bottom: 1px solid pink;
+}
+.one .imgFoot {
+  width: 40%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+}
+.one .imgFoot img {
+  padding: 2px 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  filter: blur(2px);
+  transition: all ease 0.24s;
+  width: 100%;
+  height: 100%;
+}
+.one .imgFoot img:hover {
+  -webkit-clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%);
+          clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%);
+  filter: blur(0px);
+}
+
+.two {
+  display: flex;
+  align-items: center;
+  justify-content: between;
+  height: 25vh;
+}
+.two .fir {
+  width: 40%;
+  padding: 2px 0px 2px 5%;
+}
+.two .fir h1 {
+  color: red;
+  font-size: 3rem;
+  padding: 5px 0px;
+}
+.two .fir section {
+  transition: all ease 0.25s;
+}
+.two .fir section:hover {
+  transform: scale(1.1);
+}
+.two .fir p {
+  padding: 0px 0;
+}
+.two .sec {
+  width: 15%;
+  text-align: left;
+  padding: 2px 0px 2px 5%;
+}
+.two .sec p {
+  padding: 4px 0;
+}
+.two .sec p:hover {
+  color: red;
+  cursor: context-menu;
+}
+.two .thr {
+  width: 30%;
+  text-align: left;
+  padding: 2px 0px 2px 5%;
+}
+.two .thr p {
+  padding: 4px 0;
+}
+.two .thr p:hover {
+  color: red;
+  cursor: context-menu;
+}
+.two .fth {
+  text-align: left;
+  width: 15%;
+}
+.two .fth p:first-child, .two .fth p {
+  color: red;
+  padding: 2px 0px 2px 5%;
+}
+.two .fth p:first-child:hover, .two .fth p:hover {
+  color: blue;
+  cursor: context-menu;
+}
+.two .fth .social {
+  display: flex;
+  justify-content: start;
+}
+.two .fth .social span {
+  padding: 4px 0;
+  margin: 0px 6px;
+}
+.two .fth .social span:hover {
+  color: red;
+  cursor: context-menu;
+}
+
+@media screen and (max-width: 780px) {
+  .one, .two {
+    flex-direction: column;
+    height: 100%;
+  }
+  .sec, .thr, .fth {
+    width: 100% !important;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  img {
+    filter: blur(0);
+  }
+  .fth {
+    flex-direction: column !important;
+    justify-content: space-evenly !important;
+    align-items: center !important;
+  }
+  .fth .social {
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    display: flex;
+    justify-content: space-evenly !important;
+  }
+}/*# sourceMappingURL=About.css.map */

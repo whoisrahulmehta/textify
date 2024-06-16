@@ -1,0 +1,287 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-wrap: balance;
+}
+.dark {
+  background-color: black;
+  //   background: linear-gradient(120deg, #926aff, #715bef);
+  //   background-size: 1000% 1000%;
+  //   animation: galaxy 4s ease infinite both;
+  color: white;
+}
+.light {
+  background-color: rgb(241, 247, 233);
+  // background: linear-gradient(60deg, #efefef, #d5f1f1, lightgray,);
+  //   background: linear-gradient(120deg, #ff44b1, #5befec);
+  //   background-size: 1000% 1000%;
+  //   animation: galaxy 4s ease infinite both;
+  color: black;
+}
+.titleContainer {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(120deg, #ff6ac1, #7e5bef);
+  background-size: 1000% 1000%;
+  animation: galaxy 4s ease infinite both, errase 3s ease 3s forwards 1;
+}
+.mainpage {
+  width: 100vw;
+  height: 100vh;
+  animation: birth 2.2s ease 0s 1 forwards;
+}
+.title {
+  font-size: 4rem;
+  color: ghostwhite;
+}
+.licon {
+  padding: 3px;
+  margin: 20px;
+}
+.title {
+  &:nth-child(1) {
+    animation: fallin 3s ease 0.1s forwards 1;
+  }
+}
+.loader {
+  padding: 2px;
+  margin: 0px 16px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 5px solid transparent;
+  border-top-color: #fff;
+  animation: spin 1s linear infinite;
+}
+
+/*- only -animations- here - */
+@keyframes galaxy {
+  0% {
+    background-position: 0% 100%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes errase {
+  0% {
+    height: 100vh;
+    opacity: 1;
+  }
+  100% {
+    height: 0vh;
+    opacity: 0;
+  }
+}
+@keyframes birth {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+//new
+.navigation {
+  //   background-color: white;
+  height: 8vh;
+  padding: 2px 0px;
+  background: transparent !important;
+  backdrop-filter: blur(4px);
+}
+.brand {
+  &:hover {
+    cursor: grab;
+    .icon {
+      &:hover {
+        color: rgb(234, 8, 8);
+      }
+  }
+  
+  }
+  span {
+    &:hover {
+      color: rgb(219, 6, 6);
+    }
+  }
+}
+.menu {
+  ul {
+    list-style-type: none;
+    display: flex;
+    flex: column;
+    margin: 0 7px;
+    li {
+      padding: 2px 4px;
+      margin: 0px 5px;
+    }
+    a {
+      text-decoration: none;
+      color: rgb(228, 0, 0);
+      padding: 1px 3px;
+      cursor: grabbing;
+      &:hover {
+        color: rgb(0, 255, 195);
+        .icon {
+          color: white;
+        }
+        // font-size: 1.1rem;
+        // background-color: violet;
+      }
+    }
+  }
+}
+button {
+  .toggleTheme {
+    border: 0 !important;
+  }
+}
+.btn {
+  border: 0 !important;
+  &:hover {
+    background-color: rgb(185, 24, 24) !important;
+  }
+}
+//custom css for text
+.navBar {
+  height: 8vh;
+  position: sticky;
+  top: 3px;
+}
+.content {
+  height: 92vh;
+  .info {
+    text-wrap: balance;
+    vertical-align: middle;
+  }
+}
+.textAreaM {
+  padding: 15px;
+}
+.textUtiB {
+  // display: flex;
+  // flex-direction: row;
+  width: 25%;
+}
+.outArTX {
+  textarea {
+    background-color: lightgray;
+    cursor: not-allowed;
+  }
+}
+.utlibtns {
+  padding-right: 3rem;
+  padding-left: 3rem;
+}
+.alerts {
+  text-align: center;
+}
+
+@media screen and (max-width: 780px) {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0%;
+  }
+  html {
+    width: 100%;
+  }
+  .menu {
+    margin: 15px auto;
+    height: 10vh;
+  }
+  .navBar {
+    display: flex;
+    flex-direction: column;
+    // backdrop-filter: blur(10px);
+    position: static !important;
+    .brand {
+      height: 6vh;
+      width: 100%;
+      margin-top: 3px;
+      // transform: scale(1.3);
+      font-size: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .alerts {
+        padding: 5px 0;
+      }
+    }
+  }
+
+  .textAreaM {
+    textarea {
+      margin: 54px auto;
+    }
+  }
+  .CCBtn {
+    margin: 0;
+    padding: 0;
+    button {
+      padding: 2px 1px !important;
+      margin: 0 !important;
+      width: 33% !important;
+      text-align: center !important;
+    }
+  }
+  .utlibtns {
+    flex-direction: column;
+    padding: 1rem 0px !important;
+
+    button {
+      padding: 2px 1px !important;
+      margin: 0 !important;
+      width: 33% !important;
+      text-align: center !important;
+    }
+    .textUtiB,
+    .caseUti,
+    .spcUti {
+      flex-direction: row !important;
+      width: 100% !important;
+      margin: 12px 2px !important;
+    }
+    .textUtiB {
+      button {
+        width: 50% !important;
+      }
+    }
+    .caseUti {
+      button {
+        width: 33% !important;
+      }
+    }
+    .spcUti {
+      button {
+        width: 50% !important;
+      }
+    }
+  }
+  .outArTX {
+    padding: 20px 0 !important;
+  }
+
+  .end {
+    position: absolute;
+    bottom: 0;
+  }
+}
+// here is about styling
